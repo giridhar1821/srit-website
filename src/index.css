@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --orange-primary: #F97316;
+  --orange-dark: #EA580C;
+  --orange-light: #FED7AA;
+  --black-primary: #0A0A0A;
+  --white: #FFFFFF;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Dark mode */
+.dark {
+  color-scheme: dark;
+}
+
+/* Glassmorphism */
+.glass {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.glass-dark {
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+.dark ::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+::-webkit-scrollbar-thumb {
+  background: #F97316;
+  border-radius: 3px;
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #F97316, #EA580C);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Animated underline */
+.nav-link::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #F97316;
+  transition: width 0.3s ease;
+}
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* Hero background */
+.hero-bg {
+  background: linear-gradient(135deg, #0A0A0A 0%, #1a1a1a 40%, #2d1500 100%);
+}
+
+/* Orange glow */
+.orange-glow {
+  box-shadow: 0 0 30px rgba(249, 115, 22, 0.3);
+}
+
+/* Card hover */
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.dark .card-hover:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Ticker animation */
+@keyframes ticker {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+.ticker-content {
+  animation: ticker 30s linear infinite;
+  white-space: nowrap;
+}
+
+/* Pulse orange */
+@keyframes pulse-orange {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(249, 115, 22, 0.4); }
+  50% { box-shadow: 0 0 0 10px rgba(249, 115, 22, 0); }
+}
+.pulse-orange {
+  animation: pulse-orange 2s ease infinite;
+}
+
+/* Fade in up */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.fade-in-up {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+/* Counter animation handled by JS */
+
+/* Section divider */
+.section-divider {
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #F97316, #EA580C);
+  border-radius: 2px;
+}
+
+/* Chatbot */
+.chatbot-msg-user {
+  background: linear-gradient(135deg, #F97316, #EA580C);
+  color: white;
+  border-radius: 18px 18px 4px 18px;
+}
+.chatbot-msg-bot {
+  background: #f3f4f6;
+  color: #111;
+  border-radius: 18px 18px 18px 4px;
+}
+.dark .chatbot-msg-bot {
+  background: #2a2a2a;
+  color: #f0f0f0;
+}
+
+/* Image parallax effect */
+.parallax-img {
+  transition: transform 0.1s ease-out;
+}
+
+/* Mega menu */
+.mega-menu {
+  animation: fadeInUp 0.2s ease;
+}
+
+/* Stats counter */
+.stat-number {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+}
+
+/* Orange button */
+.btn-orange {
+  background: linear-gradient(135deg, #F97316, #EA580C);
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.btn-orange::before {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 100%; height: 100%;
+  background: linear-gradient(135deg, rgba(255,255,255,0.15), transparent);
+  transition: left 0.3s ease;
+}
+.btn-orange:hover::before {
+  left: 100%;
+}
+.btn-orange:hover {
+  box-shadow: 0 8px 25px rgba(249, 115, 22, 0.45);
+  transform: translateY(-2px);
+}
+
+/* Outline button */
+.btn-outline {
+  border: 2px solid #F97316;
+  color: #F97316;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.btn-outline:hover {
+  background: #F97316;
+  color: white;
+  box-shadow: 0 8px 25px rgba(249, 115, 22, 0.35);
+  transform: translateY(-2px);
+}
+
+/* Section heading */
+.section-tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #F97316;
+}
+
+/* Mobile menu transition */
+.mobile-menu {
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+}
+
+/* Department card */
+.dept-card {
+  position: relative;
+  overflow: hidden;
+}
+.dept-card::before {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 100%; height: 4px;
+  background: linear-gradient(90deg, #F97316, #EA580C);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+.dept-card:hover::before {
+  transform: scaleX(1);
+}
+
+/* Recruiter logo filter */
+.recruiter-logo {
+  filter: grayscale(100%);
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+.recruiter-logo:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+/* College building background overlay */
+.building-overlay {
+  background: linear-gradient(to right, rgba(10,10,10,0.95) 40%, rgba(10,10,10,0.6) 70%, rgba(10,10,10,0.3) 100%);
+}
