@@ -88,6 +88,10 @@ export const navItems: NavItem[] = [
     ],
   },
   {
+  label: "Bus Tracking",
+  to: "/bus-tracking",
+  },
+  {
     label: 'Portals',
     to: '#',
     children: [
