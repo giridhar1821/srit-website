@@ -132,6 +132,25 @@ const Navbar: React.FC = () => {
           </div>
         </nav>
 
+        {/* Mobile Quick Navigation */}
+<div className="lg:hidden bg-white dark:bg-black border-t border-gray-200 dark:border-neutral-800 overflow-x-auto whitespace-nowrap">
+  <div className="flex items-center gap-2 px-4 py-2 min-w-max">
+    {navItems.map((item) => (
+      <Link
+        key={item.label}
+        to={item.to}
+        className={`px-4 py-2 rounded-full text-sm font-medium transition ${
+          location.pathname === item.to
+            ? "bg-orange-500 text-white"
+            : "bg-gray-100 dark:bg-neutral-800 text-gray-700 dark:text-gray-300 hover:bg-orange-100 dark:hover:bg-neutral-700"
+        }`}
+      >
+        {item.label}
+      </Link>
+    ))}
+  </div>
+</div>
+
         {/* Mobile menu */}
         <div className={`lg:hidden mobile-menu overflow-hidden ${mobileOpen ? 'max-h-[600px] opacity-100' : 'max-h-0 opacity-0'}`}>
           <div className="px-4 pb-4 space-y-1 bg-white dark:bg-black border-t border-gray-100 dark:border-neutral-800">
