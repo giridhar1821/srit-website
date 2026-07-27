@@ -4,7 +4,7 @@ import { CheckCircle2, Target, Eye, Heart, ArrowRight } from 'lucide-react';
 
 const About: React.FC = () => {
   const features = [
-    'NBA & NAAC Accredited Programs',
+    'NBA & NAAC A+ Accredited Programs',
     'Industry-Aligned Curriculum',
     'State-of-the-Art Research Labs',
     '100+ Recruiting Partners',

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Sun, Moon, ChevronDown, GraduationCap, Search, Bell } from 'lucide-react';
+import { Menu, X, Sun, Moon, ChevronDown, Search, Bell } from 'lucide-react';
 import { navItems } from '@/data/content';
 import { useTheme } from '@/context/ThemeContext';
 
@@ -55,10 +55,12 @@ const Navbar: React.FC = () => {
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <Link to="/" className="flex items-center gap-2 shrink-0">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center shadow-orange">
-                <GraduationCap className="text-white" size={22} />
-              </div>
-              <div className="leading-none">
+            <img
+  src="/images/srit logo.png"
+  alt="SRIT Logo"
+  className="h-16 w-16 object-cover"
+/>
+                            <div className="leading-none">
                 <span className="font-display font-extrabold text-lg text-black dark:text-white tracking-tight">SRIT</span>
                 <span className="block text-[10px] text-gray-500 dark:text-gray-400 font-medium tracking-wide">Anantapur</span>
               </div>

@@ -1,3 +1,4 @@
+import StudentClubs from "@/components/StudentClubs";
 import React from 'react';
 import Hero from '@/components/Hero';
 import NewsTicker from '@/components/NewsTicker';
@@ -25,6 +26,7 @@ const Home: React.FC = () => {
       <Stats />
       <Departments />
       <Recruiters />
+      <StudentClubs />
       <Events />
       <Research />
       <FacultyHighlights />
