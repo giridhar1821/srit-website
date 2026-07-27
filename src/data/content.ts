@@ -22,12 +22,12 @@ export const navItems: NavItem[] = [
     label: 'Departments',
     to: '/departments',
     children: [
-      { label: 'Computer Science & Engg', to: '/departments#cse', desc: 'AI, ML & core CS' },
-      { label: 'Electronics & Comm', to: '/departments#ece', desc: 'VLSI, IoT & embedded' },
-      { label: 'Electrical & Electronics', to: '/departments#eee', desc: 'Power & control systems' },
-      { label: 'Mechanical Engineering', to: '/departments#mech', desc: 'Thermal & design' },
-      { label: 'Civil Engineering', to: '/departments#civil', desc: 'Structures & environment' },
-      { label: 'MBA', to: '/departments#mba', desc: 'Business administration' },
+      { label: 'Computer Science & Engg', to: '/departments#cse', desc: 'Core CSE, AI & DS, AI & ML' },
+      { label: 'Electronics & Comm', to: '/departments#ece'  },
+      { label: 'Electrical & Electronics', to: '/departments#eee' },
+      { label: 'Mechanical Engineering', to: '/departments#mech'  },
+      { label: 'Civil Engineering', to: '/departments#civil' },
+      { label: 'MBA', to: '/departments#mba' },
     ],
   },
   {
@@ -131,21 +131,34 @@ export interface Department {
 }
 
 export const departments: Department[] = [
-  {
-    id: 'cse',
-    name: 'Computer Science & Engineering',
-    shortName: 'CSE',
-    icon: 'Cpu',
-    hod: 'Dr. R. Saravanan, Ph.D.',
-    established: '2008',
+{
+    id: "cse",
+
+    name: "Computer Science & Engineering",
+
+    shortName: "CSE",
+
+    icon: "Cpu",
+
+    hod: "Dr. R. Saravanan",
+
+    established: "2008",
+
     students: 480,
+
     faculty: 24,
+
     labs: 12,
-    description: 'Pioneering education in algorithms, AI, ML, cloud computing, and full-stack development with industry-aligned curriculum.',
-    vision: 'To produce globally competent computer science professionals with ethical values and innovative spirit.',
+
+    description: "...",
+
+    vision: "...",
+
     placements: 92,
-  },
-  {
+
+   
+} ,
+ {
     id: 'ece',
     name: 'Electronics & Communication Engineering',
     shortName: 'ECE',

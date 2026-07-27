@@ -1,3 +1,4 @@
+import DepartmentDetails from '@/pages/DepartmentDetails';
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from '@/context/ThemeContext';
@@ -26,6 +27,8 @@ const App: React.FC = () => {
           <Navbar />
           <main>
             <Routes>
+              <Route
+              path="/departments/:departmentId" element={<DepartmentDetails />}/>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/departments" element={<Departments />} />
